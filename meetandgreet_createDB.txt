@@ -1,0 +1,33 @@
+use meetandgreet
+
+db.connections.drop()
+db.users.drop()
+db.userprofiles.drop()
+db.userlogins.drop()
+
+db.createCollection('connections')
+db.createCollection('users')
+db.createCollection('userprofiles')
+db.createCollection('userlogins')
+db.createCollection('inviteusers')
+
+db.connections.insert({connid:'1',userId:'sam@mail.com',category:'Painting',name:'Interested in Spray Painting?',topic:'Spray Painting',hostname:'Sam',venue:'Uptown, Charlotte',details:'Calling all Creatives!! This event is for those who love to spray the canvas in their own way. Bring your ideas and we give you colors and brushes.',startTime:'06:00',endTime:'07:00',date:'02 Jan 2020'})
+
+db.connections.insert({connid:'2',userId:'mary@yahoo.com',category:'Painting',name:'Looking for Oil Painting classes?',topic:'Oil Painting',hostname:'Mary',venue:'UNCC, Charlotte',details:'For paint lovers and creators alike! Experienced artists seeking experience artists. Beginners looking for guidance.',startTime:'03:00',endTime:'05:00',date:'10 Jan 2020'})
+
+db.connections.insert({connid:'3',userId:'adam@mail.com',category:'Painting',name:'Want to create something colorful!!',topic:'Water Painting',hostname:'Adam',venue:'Uptown, Charlotte',details:'Join us and experience the colors!!',startTime:'06:00',endTime:'07:00',date:'02 Feb 2020'})
+
+db.connections.insert({connid:'4',userId:'emily@uncc.edu',category:'Dance',name:'excited to express your feelings through dance?',topic:'Contemporary Dance',hostname:'Emily',venue:'Uptown, Charlotte',details:'Feel the Joy of dance with us! This is for all ages.',startTime:'06:00',endTime:'07:00',date:'02 Jan 2020'})
+
+db.connections.insert({connid:'5',userId:'pelkal@uncc.edu',category:'Dance',name:'Love to swing!!',topic:'Jazz Dance',hostname:'Monica Geller',venue:'Uptown, Charlotte',details:'Swing and twirl! learn, teach and have fun with people alike!',startTime:'06:00',endTime:'07:00',date:'18 Jan 2020'})
+
+db.connections.insert({connid:'6',userId:'adam@mail.com',category:'Dance',name:'Love to Hiphop!!',topic:'HipHop Dance',hostname:'Adam',venue:'Uptown, Charlotte',details:'Joy with the music and us! Free snacks are available',startTime:'06:00',endTime:'07:00',date:'22 Jan 2020'})
+
+
+db.users.insert({userID:'01',fname:'Monica',lname:'Geller',email:'pelkal@uncc.edu',addr1:'Tryon st',addr2:'Apt 119',city:'Charlotte',state:'NC',zipcode:28217,country:'US',phoneNo:999999999})
+
+db.userlogins.insert({username:'pelkal@uncc.edu', password:'$2b$10$G.FprJ.Qkg6NP1ct51fq0uPq2OYHSVW9BO1jDuFEHJbQ3sZVQ6kH6'})
+
+db.users.insert({userID:'02',fname:'norm',lname:'uncc',email:'norm@uncc.edu',addr1:'university st',addr2:'Apt 333',city:'Charlotte',state:'NC',zipcode:28213,country:'US',phoneNo:8856856856})
+
+db.userlogins.insert({username:'norm@uncc.edu', password:'$2b$10$rinkuXtOnCnRocs.5aNGhee8J5du79xAqTjxQZvq8YSD5BAGz0kz6'})
